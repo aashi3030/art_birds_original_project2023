@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>Originals...</title>    
+      <nav>
+        <h2 style="background-color: rgb(120, 88, 0);"><i>Welcome !!!  Log in for buying more exciting arts or just visit your exsisting arts</i></h2>
+       
+    </nav>
+        
+            <div id="drag-container" style="position:fixed; right:210px; top:120px;">  
+                <div id="spin-container">  
+                 <!-- Add your images (or video) here -->  
+                 <img src="radha-krishna.jpg" alt="radha">  
+                 <img src="Glow-of-Hope-–-SL-Haldankar-Art.webp" alt="">  
+                 <img src="1475905025361_35_24_Beauty_of_Queen_in_hand_3500_selling__30340.1506574492.jpg" alt="">  
+                 <img src="beautifulbride.jpg" alt="">
+                  <img src="girlwithfeather.jpg" alt="">  
+                 <img src="radhakrishnabeauty.jpg" alt="">  
+                 <img src="maharajashivaji.jpg" alt="">  
+                 <img src="peacock_beautiful.jpg" alt="">  
+                 
+                 <img src="indian.jpg" alt="">  
+                </div>  
+                <div id="ground"></div>  
+               </div>
+      
+   
+  </head>
+
+<body>
+    {{!-- Navigation links --}}
+  
+    {{!-- Body --}}
+    <div class="container mt-4" style="position:fixed; left:110px; top:90px;">
+        <div class="card" style="width: 18rem;" style="background-color: rgb(120, 88, 0)">            
+            <div class="card-header"><b><i  style="color: rgb(120, 88, 0)">Login !!!</i></b></div>    
+            <div class="card-body">
+                <form action="/login" method="POST">
+                    <div class="mb-3">
+                        <label for="email-reg" class="form-label"><b><i>Email</i></b></label>
+                        <input type="text" class="form-control" id="email-reg" name="email">                        
+                    </div>
+                    <div class="mb-3">
+                        <label for="password-reg" class="form-label"><b><i>Password</i></b></label>
+                        <input type="password" class="form-control" id="password-reg" name="password">
+                    </div>
+                
+                    <div class="mb-3">
+                        <label for="images-reg" class="form-label"><b><i>Images you selected</i></b></label>
+                         <select name="images" id="images">
+                        <optgroup label="Originals">
+                        <option value="volvo">Originals</option>
+                          
+                        <option value="Radhe-Krishnan">Radhe-Krishnan</option>
+                        <option value="Lady-With-Glowing-Lamp">Lady-With-Glowing-Lamp</option>
+                        <option value="Mughlan">Mughlan</option>
+                        <option value="Indian-Bride">Indian-Bride</option>
+                        <option value="Mughlan">Mughlan</option>
+                        <option value="Lady-With-Beauty">Lady With Beauty</option>
+                        
+                         <option value="Radha-Rani-With-Krishna">Radha-Rani-With-Krishna</option>
+                        <option value="Shivaji-Rao">Shivaji-Rao</option>
+                        <option value="Peacock">Peacock</option>
+                        <option value="Women-in-her-simplicity">Women-in-her-simplicity</option>
+                        
+                         
+                        
+                        
+                        </optgroup>
+                        <optgroup label="Paintings">
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                        </optgroup>
+                        <optgroup label="Fine-Arts">
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                        </optgroup>
+                        <optgroup label="Potraits">
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                        </optgroup>
+                      
+                        <optgroup label="Sculptors">
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                        </optgroup>
+                      
+                      
+                        
+                        </select>
+                        {{!-- <input type="images" class="form-control" id="images-reg" name="images"> --}}
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="background-color: rgb(120, 88, 0)">Submit</button>           
+                    
+               
+                </form>
+                    <br>
+                    <a href="/"> <button class="btn btn-primary" style="background-color: rgb(120, 88, 0)">Home</button></a>
+                    <a href="/Sign-Up"> <button  class="btn btn-primary" style="background-color: rgb(120, 88, 0)">  Sign-Up</button></a>
+
+
+
+            </div>
+        </div>
+        {{#if message }}
+            <h4 class="alert alert-danger mt-4">{{message}}</h4>
+        {{/if}}
+    </div>
+</body>
+<style>
+    body{
+ background-color: rgb(124, 6, 6);
+    }
+    body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    
+  background-image: url('goldenrose.webp');
+}
+
+</style>
+
+         
+<script>
+   var radius = 330;   
+ var autoRotate = true; 
+ var rotateSpeed = -60; 
+ var imgWidth = 190; 
+ var imgHeight = 290; 
+ var bgMusicURL = 'https://api.soundcloud.com/tracks/143041228/stream?client_id=587aa2d384f7333a886010d5f52f302a';  
+ var bgMusicControls = true;   
+ setTimeout(init, 1000);  
+ var odrag = document.getElementById('drag-container');  
+ var ospin = document.getElementById('spin-container');  
+ var aImg = ospin.getElementsByTagName('img');  
+ var aVid = ospin.getElementsByTagName('video');  
+ var aEle = [...aImg, ...aVid]; 
+ ospin.style.width = imgWidth + "px";  
+ ospin.style.height = imgHeight + "px";  
+ var ground = document.getElementById('ground');  
+ ground.style.width = radius * 3 + "px";  
+ ground.style.height = radius * 3 + "px";  
+ function init(delayTime) {  
+  for (var i = 0; i < aEle.length; i++) {  
+   aEle[i].style.transform = "rotateY(" + (i * (360 / aEle.length)) + "deg) translateZ(" + radius + "px)";  
+   aEle[i].style.transition = "transform 1s";  
+   aEle[i].style.transitionDelay = delayTime || (aEle.length - i) / 4 + "s";  
+  }  
+ }  
+ function applyTranform(obj) {  
+  if(tY > 180) tY = 180;  
+  if(tY < 0) tY = 0;  
+  // Apply the angle  
+  obj.style.transform = "rotateX(" + (-tY) + "deg) rotateY(" + (tX) + "deg)";  
+ }  
+ function playSpin(yes) {  
+  ospin.style.animationPlayState = (yes?'running':'paused');  
+ }  
+ var sX, sY, nX, nY, desX = 0,  
+   desY = 0,  
+   tX = 0,  
+   tY = 10;  
+ // auto spin  
+ if (autoRotate) {  
+  var animationName = (rotateSpeed > 0 ? 'spin' : 'spinRevert');  
+  ospin.style.animation = `${animationName} ${Math.abs(rotateSpeed)}s infinite linear`;  
+ }  
+ // add background music  
+ if (bgMusicURL) {  
+  document.getElementById('music-container').innerHTML += `  
+ <audio src="${bgMusicURL}" ${bgMusicControls? 'controls': ''} autoplay loop>    
+ <p>If you are reading this, it is because your browser does not support the audio element.</p>  
+ </audio>  
+ `;  
+ }  
+ // setup events  
+ document.onpointerdown = function (e) {  
+  clearInterval(odrag.timer);  
+  e = e || window.event;  
+  var sX = e.clientX,  
+    sY = e.clientY;  
+  this.onpointermove = function (e) {  
+   e = e || window.event;  
+   var nX = e.clientX,  
+     nY = e.clientY;  
+   desX = nX - sX;  
+   desY = nY - sY;  
+   tX += desX * 0.1;  
+   tY += desY * 0.1;  
+   applyTranform(odrag);  
+   sX = nX;  
+   sY = nY;  
+  };  
+  this.onpointerup = function (e) {  
+   odrag.timer = setInterval(function () {  
+    desX *= 0.95;  
+    desY *= 0.95;  
+    tX += desX * 0.1;  
+    tY += desY * 0.1;  
+    applyTranform(odrag);  
+    playSpin(false);  
+    if (Math.abs(desX) < 0.5 && Math.abs(desY) < 0.5) {  
+     clearInterval(odrag.timer);  
+     playSpin(true);  
+    }  
+   }, 17);  
+   this.onpointermove = this.onpointerup = null;  
+  };  
+  return false;  
+ };  
+ document.onmousewheel = function(e) {  
+  e = e || window.event;  
+  var d = e.wheelDelta / 20 || -e.detail;  
+  radius += d;  
+  init(1);  
+ }; 
+</script>
+<style>
+* {  
+    margin: 0;  
+    padding: 0;  
+   }  
+   html,  
+   body {  
+    height: 100%;  
+    /* for touch screen */  
+    touch-action: none;   
+   }  
+   body {  
+    display: -webkit-box;  
+    display: -ms-flexbox;  
+    display: flex;  
+    background: rgb(120, 88, 0);  
+    -webkit-perspective: 1000px;  
+        perspective: 1000px;  
+    -webkit-transform-style: preserve-3d;  
+        transform-style: preserve-3d;  
+   }  
+   * {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  background-image: url('goldenbricks2.jpg');
+  }
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 120px;
+}
+.portfolio h2 {
+  flex-basis: 100%;
+  text-align: center;
+  margin: 50px auto 30px;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: #111;
+}
+.card {
+  width: 25%;
+  overflow: hidden;
+  position: relative;
+}
+.card .content {
+  z-index: 2;
+  width: 100%;
+  position: absolute;
+  bottom: -100px;
+  transition: all 0.7s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  min-height: 100px;
+  background: #111;
+}
+.card .image {
+  z-index: 1;
+  height: 100%;
+}
+.card img {
+  height: 100%;
+  width: 100%;
+  transition: all 0.5s ease;
+  transform: scale(1.2);
+}
+.card-body {
+    flex: 1 1 auto;
+    padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+    color: rgb(120, 88, 0);
+}
+.card:hover .content {
+  bottom: 0px;
+  color: #fff;
+}
+.card:hover .image img {
+  transform: scale(1);
+}
+.card .content span:first-child {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+  color: rgb(120, 88, 0);
+  font-size: 16px;
+}
+.card .content span:last-child {
+  font-size: 14px;
+  color: #18cfab;
+  text-align: center;
+  font-weight: 700;
+}
+@media screen and (max-width: 768px) {
+  .card {
+  width: 50%;
+  }
+  .card .content {
+    bottom: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .card {
+  width: 100%;
+  }
+}
+
+   #drag-container, #spin-container {  
+    position: relative;  
+    display: -webkit-box;  
+    display: -ms-flexbox;  
+    display: flex;  
+    margin: auto;  
+    -webkit-transform-style: preserve-3d;  
+        transform-style: preserve-3d;  
+    -webkit-transform: rotateX(-10deg);  
+        transform: rotateX(-10deg);  
+   }  
+   #drag-container img, #drag-container video {  
+    -webkit-transform-style: preserve-3d;  
+        transform-style: preserve-3d;  
+    position: absolute;  
+    left: 0;  
+    top: 0;  
+    width: 100%;  
+    height: 100%;  
+    line-height: 200px;  
+    font-size: 50px;  
+    text-align: center;  
+    -webkit-box-shadow: 0 0 8px #fff;  
+        box-shadow: 0 0 8px #fff;  
+    -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0005);  
+   }  
+   #drag-container img:hover, #drag-container video:hover {  
+    -webkit-box-shadow: 0 0 15px #fffd;  
+        box-shadow: 0 0 15px #fffd;  
+    -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0007);  
+   }  
+   #drag-container p {  
+    font-family: Serif;  
+    position: absolute;  
+    top: 100%;  
+    left: 50%;  
+    -webkit-transform: translate(-50%,-50%) rotateX(90deg);  
+        transform: translate(-50%,-50%) rotateX(90deg);  
+    color: #fff;  
+   }  
+   #ground {  
+    width: 900px;  
+    height: 900px;  
+    position: absolute;  
+    top: 100%;  
+    left: 50%;  
+    -webkit-transform: translate(-50%,-50%) rotateX(90deg);  
+        transform: translate(-50%,-50%) rotateX(90deg);  
+    background: -webkit-radial-gradient(center center, farthest-side , #9993, transparent);  
+   }  
+   #music-container {  
+    position: absolute;  
+    top: 0;  
+    left: 0;  
+   }  
+   @-webkit-keyframes spin {  
+    from{  
+     -webkit-transform: rotateY(0deg);  
+         transform: rotateY(0deg);  
+    } to{  
+     -webkit-transform: rotateY(360deg);  
+         transform: rotateY(360deg);  
+    }  
+   }  
+   @keyframes spin {  
+    from{  
+     -webkit-transform: rotateY(0deg);  
+         transform: rotateY(0deg);  
+    } to{  
+     -webkit-transform: rotateY(360deg);  
+         transform: rotateY(360deg);  
+    }  
+   }  
+   @-webkit-keyframes spinRevert {  
+    from{  
+     -webkit-transform: rotateY(360deg);  
+         transform: rotateY(360deg);  
+    } to{  
+     -webkit-transform: rotateY(0deg);  
+         transform: rotateY(0deg);  
+    }  
+   }  
+   @keyframes spinRevert {  
+    from{  
+     -webkit-transform: rotateY(360deg);  
+         transform: rotateY(360deg);  
+    } to{  
+     -webkit-transform: rotateY(0deg);  
+         transform: rotateY(0deg);  
+    } 
+     
+   }  
+</style>
+
+</html>

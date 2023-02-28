@@ -1,0 +1,435 @@
+<html>
+    <head>  
+      
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+<form >
+    <div class="portfolio">
+     <h2 class="title" ><b><i style="height: 25px;">Welcome To Originals</i></b></h2>
+    <a href="/login" class="card">
+       <div class="content">
+       <span class="title"><i>Radhe krishnan</i></span>
+      <span class="category">Artist ~ The Krishnan Murti</span>
+      <span class="define">This Art depicts the beauty of lord krishna and radha having their time with glowing lamp </span>
+      </div>
+      <div class="image">
+      <img src="radha-krishna.jpg" alt=""/>
+        </div>
+    </a> 
+    <a href="/login" class="card">
+        <div class="content">
+        <span class="title"><i>Lady with glowing lamp</i></span>
+        <span class="category">Artist ~ dhiranjay singh</span>
+        <span class="define">This Art depicts the lady with  burning flame of lamp and her beautiful ethic wore with saree </span>
+        </div>
+        <div class="image">
+        <img src="Glow-of-Hope-–-SL-Haldankar-Art.webp" alt=""/>
+        </div>
+    </a>
+   <br>
+    <a href="/login" class="card">
+        <div class="content">
+        <span class="title"><i>Mughalan</i></span>
+        <span class="category">Artist ~ sarojini naidu</span>
+        <span class="define">This Art depicts the mughalan lady with the beautiful parrot and an attractive wore of mughalan empire </span>
+        </div>
+        <div class="image">
+        <img src="1475905025361_35_24_Beauty_of_Queen_in_hand_3500_selling__30340.1506574492.jpg" alt=""/>
+        </div>
+    </a>
+    </div>
+    <div class="portfolio">
+     <a href="/login" class="card">
+        <div class="content">
+        <span class="title"><i>Mughalan</i></span>
+        <span class="category">Artist ~ sarojini naidu</span>
+        <span class="define">This Art depicts the mughalan lady with the beautiful parrot and an attractive wore of mughalan empire </span>
+        </div>
+        <div class="image">
+        <img src="beautifulbride.jpg" alt=""/>
+    </div>
+    </a>
+
+    <a href="/login" class="card">
+        <div class="content">
+        <span class="title"><i>Mughalan</i></span>
+        <span class="category">Artist ~ sarojini naidu</span>
+        <span class="define">This Art depicts the mughalan lady with the beautiful parrot and an attractive wore of mughalan empire </span>
+        </div>
+        <div class="image">
+        <img src="girlwithfeather.jpg" alt="" />
+        </div>
+    </a> 
+    <a href="/login" class="card">
+        <div class="content">
+        <span class="title"><i>Mughalan</i></span>
+        <span class="category">Artist ~ sarojini naidu</span>
+        <span class="define">This Art depicts the mughalan lady with the beautiful parrot and an attractive wore of mughalan empire </span>
+        </div>
+        <div class="image">
+        <img src="radhakrishnabeauty.jpg" alt="" />
+        </div>
+    </a>
+    </div>
+    <div class="portfolio">
+    <a href="/login" class="card">
+        <div class="content">
+        <span class="title"><i>Mughalan</i></span>
+        <span class="category">Artist ~ sarojini naidu</span>
+        <span class="define">This Art depicts the mughalan lady with the beautiful parrot and an attractive wore of mughalan empire </span>
+        </div>
+        <div class="image">
+        <img src="maharajashivaji.jpg" alt="" />
+        </div>
+    </a>
+
+    <a href="/login" class="card">
+    <div class="content">
+      <span class="title"><i>Mughalan</i></span>
+      <span class="category">Artist ~ sarojini naidu</span>
+      <span class="define">This Art depicts the mughalan lady with the beautiful parrot and an attractive wore of mughalan empire </span>
+      </div>
+      <div class="image">
+      <img src="peacock.jpg" alt="" />
+    </div>
+    </a>
+
+    <a href="/login" class="card">
+    <div class="content">
+        <span class="title"><i>Mughalan</i></span>
+        <span class="category">Artist ~ sarojini naidu</span>
+        <span class="define">This Art depicts the mughalan lady with the beautiful parrot and an attractive wore of mughalan empire </span>
+        </div>
+        <div class="image">
+        <img src="indian.jpg" alt="" />
+    </div>
+    </a>
+
+    </div>
+    </form>
+   
+    </head>   
+<br>
+<br>
+<br>
+<br>
+<br>
+<br> 
+    <title>Originals...</title>    
+        <body>
+            <div id="drag-container">  
+                <div id="spin-container">  
+                 <!-- Add your images (or video) here -->  
+                 <img src="radha-krishna.jpg" alt="radha">  
+                 <img src="Glow-of-Hope-–-SL-Haldankar-Art.webp" alt="">  
+                 <img src="1475905025361_35_24_Beauty_of_Queen_in_hand_3500_selling__30340.1506574492.jpg" alt="">  
+                 <img src="beautifulbride.jpg" alt="">
+                  <img src="girlwithfeather.jpg" alt="">  
+                 <img src="radhakrishnabeauty.jpg" alt="">  
+                 <img src="maharajashivaji.jpg" alt="">  
+                 <img src="peacock_beautiful.jpg" alt="">  
+                 
+                 <img src="indian.jpg" alt="">  
+                </div>  
+                <div id="ground"></div>  
+               </div>
+        </body>
+   
+         
+<script>
+   var radius = 330;   
+ var autoRotate = true; 
+ var rotateSpeed = -60; 
+ var imgWidth = 190; 
+ var imgHeight = 290; 
+ var bgMusicURL = 'https://api.soundcloud.com/tracks/143041228/stream?client_id=587aa2d384f7333a886010d5f52f302a';  
+ var bgMusicControls = true;   
+ setTimeout(init, 1000);  
+ var odrag = document.getElementById('drag-container');  
+ var ospin = document.getElementById('spin-container');  
+ var aImg = ospin.getElementsByTagName('img');  
+ var aVid = ospin.getElementsByTagName('video');  
+ var aEle = [...aImg, ...aVid]; 
+ ospin.style.width = imgWidth + "px";  
+ ospin.style.height = imgHeight + "px";  
+ var ground = document.getElementById('ground');  
+ ground.style.width = radius * 3 + "px";  
+ ground.style.height = radius * 3 + "px";  
+ function init(delayTime) {  
+  for (var i = 0; i < aEle.length; i++) {  
+   aEle[i].style.transform = "rotateY(" + (i * (360 / aEle.length)) + "deg) translateZ(" + radius + "px)";  
+   aEle[i].style.transition = "transform 1s";  
+   aEle[i].style.transitionDelay = delayTime || (aEle.length - i) / 4 + "s";  
+  }  
+ }  
+ function applyTranform(obj) {  
+  if(tY > 180) tY = 180;  
+  if(tY < 0) tY = 0;  
+  // Apply the angle  
+  obj.style.transform = "rotateX(" + (-tY) + "deg) rotateY(" + (tX) + "deg)";  
+ }  
+ function playSpin(yes) {  
+  ospin.style.animationPlayState = (yes?'running':'paused');  
+ }  
+ var sX, sY, nX, nY, desX = 0,  
+   desY = 0,  
+   tX = 0,  
+   tY = 10;  
+ // auto spin  
+ if (autoRotate) {  
+  var animationName = (rotateSpeed > 0 ? 'spin' : 'spinRevert');  
+  ospin.style.animation = `${animationName} ${Math.abs(rotateSpeed)}s infinite linear`;  
+ }  
+ // add background music  
+ if (bgMusicURL) {  
+  document.getElementById('music-container').innerHTML += `  
+ <audio src="${bgMusicURL}" ${bgMusicControls? 'controls': ''} autoplay loop>    
+ <p>If you are reading this, it is because your browser does not support the audio element.</p>  
+ </audio>  
+ `;  
+ }  
+ // setup events  
+ document.onpointerdown = function (e) {  
+  clearInterval(odrag.timer);  
+  e = e || window.event;  
+  var sX = e.clientX,  
+    sY = e.clientY;  
+  this.onpointermove = function (e) {  
+   e = e || window.event;  
+   var nX = e.clientX,  
+     nY = e.clientY;  
+   desX = nX - sX;  
+   desY = nY - sY;  
+   tX += desX * 0.1;  
+   tY += desY * 0.1;  
+   applyTranform(odrag);  
+   sX = nX;  
+   sY = nY;  
+  };  
+  this.onpointerup = function (e) {  
+   odrag.timer = setInterval(function () {  
+    desX *= 0.95;  
+    desY *= 0.95;  
+    tX += desX * 0.1;  
+    tY += desY * 0.1;  
+    applyTranform(odrag);  
+    playSpin(false);  
+    if (Math.abs(desX) < 0.5 && Math.abs(desY) < 0.5) {  
+     clearInterval(odrag.timer);  
+     playSpin(true);  
+    }  
+   }, 17);  
+   this.onpointermove = this.onpointerup = null;  
+  };  
+  return false;  
+ };  
+ document.onmousewheel = function(e) {  
+  e = e || window.event;  
+  var d = e.wheelDelta / 20 || -e.detail;  
+  radius += d;  
+  init(1);  
+ }; 
+</script>
+<style>
+* {  
+    margin: 0;  
+    padding: 0;  
+   }  
+   html,  
+   body {  
+    height: 100%;  
+    /* for touch screen */  
+    touch-action: none;   
+   }  
+   body {  
+    display: -webkit-box;  
+    display: -ms-flexbox;  
+    display: flex;  
+    background: rgb(120, 88, 0);  
+    -webkit-perspective: 1000px;  
+        perspective: 1000px;  
+    -webkit-transform-style: preserve-3d;  
+        transform-style: preserve-3d;  
+   }  
+   * {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    background-image: url('whiterose.webp');
+}
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 120px;
+}
+.portfolio h2 {
+  flex-basis: 100%;
+  text-align: center;
+  margin: 50px auto 30px;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: #111;
+}
+.card {
+  width: 25%;
+  overflow: hidden;
+  position: relative;
+}
+.card .content {
+  z-index: 2;
+  width: 100%;
+  position: absolute;
+  bottom: -100px;
+  transition: all 0.7s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  min-height: 100px;
+  background: #111;
+}
+.card .image {
+  z-index: 1;
+  height: 100%;
+}
+.card img {
+  height: 100%;
+  width: 100%;
+  transition: all 0.5s ease;
+  transform: scale(1.2);
+}
+.card:hover .content {
+  bottom: 0px;
+  color: #fff;
+}
+.card:hover .image img {
+  transform: scale(1);
+}
+.card .content span:first-child {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+}
+.card .content span:last-child {
+  font-size: 14px;
+  color: #18cfab;
+  text-align: center;
+  font-weight: 700;
+}
+@media screen and (max-width: 768px) {
+  .card {
+  width: 50%;
+  }
+  .card .content {
+    bottom: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .card {
+  width: 100%;
+  }
+}
+
+   #drag-container, #spin-container {  
+    position: relative;  
+    display: -webkit-box;  
+    display: -ms-flexbox;  
+    display: flex;  
+    margin: auto;  
+    -webkit-transform-style: preserve-3d;  
+        transform-style: preserve-3d;  
+    -webkit-transform: rotateX(-10deg);  
+        transform: rotateX(-10deg);  
+   }  
+   #drag-container img, #drag-container video {  
+    -webkit-transform-style: preserve-3d;  
+        transform-style: preserve-3d;  
+    position: absolute;  
+    left: 0;  
+    top: 0;  
+    width: 100%;  
+    height: 100%;  
+    line-height: 200px;  
+    font-size: 50px;  
+    text-align: center;  
+    -webkit-box-shadow: 0 0 8px #fff;  
+        box-shadow: 0 0 8px #fff;  
+    -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0005);  
+   }  
+   #drag-container img:hover, #drag-container video:hover {  
+    -webkit-box-shadow: 0 0 15px #fffd;  
+        box-shadow: 0 0 15px #fffd;  
+    -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0007);  
+   }  
+   #drag-container p {  
+    font-family: Serif;  
+    position: absolute;  
+    top: 100%;  
+    left: 50%;  
+    -webkit-transform: translate(-50%,-50%) rotateX(90deg);  
+        transform: translate(-50%,-50%) rotateX(90deg);  
+    color: #fff;  
+   }  
+   #ground {  
+    width: 900px;  
+    height: 900px;  
+    position: absolute;  
+    top: 100%;  
+    left: 50%;  
+    -webkit-transform: translate(-50%,-50%) rotateX(90deg);  
+        transform: translate(-50%,-50%) rotateX(90deg);  
+    background: -webkit-radial-gradient(center center, farthest-side , #9993, transparent);  
+   }  
+   #music-container {  
+    position: absolute;  
+    top: 0;  
+    left: 0;  
+   }  
+   @-webkit-keyframes spin {  
+    from{  
+     -webkit-transform: rotateY(0deg);  
+         transform: rotateY(0deg);  
+    } to{  
+     -webkit-transform: rotateY(360deg);  
+         transform: rotateY(360deg);  
+    }  
+   }  
+   @keyframes spin {  
+    from{  
+     -webkit-transform: rotateY(0deg);  
+         transform: rotateY(0deg);  
+    } to{  
+     -webkit-transform: rotateY(360deg);  
+         transform: rotateY(360deg);  
+    }  
+   }  
+   @-webkit-keyframes spinRevert {  
+    from{  
+     -webkit-transform: rotateY(360deg);  
+         transform: rotateY(360deg);  
+    } to{  
+     -webkit-transform: rotateY(0deg);  
+         transform: rotateY(0deg);  
+    }  
+   }  
+   @keyframes spinRevert {  
+    from{  
+     -webkit-transform: rotateY(360deg);  
+         transform: rotateY(360deg);  
+    } to{  
+     -webkit-transform: rotateY(0deg);  
+         transform: rotateY(0deg);  
+    } 
+     
+   }  
+</style>
+</html>
