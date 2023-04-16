@@ -37,7 +37,7 @@ db.connect((error) => {
 
 app.get("/",(req,res) =>
 {
-    res.render("index2")
+    res.render("home")
 })
 app.get("/Sign-Up", (req, res) => {
     res.render("Sign-up")
